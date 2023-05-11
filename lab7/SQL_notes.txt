@@ -1,0 +1,11 @@
+.schema
+SELECT [column] FROM [table] - prints from a single column
+ORDER BY [column] <DESC> - Prints the selected column in the order of a different column. Ascending order by default
+... LIMIT n - so you don't need to see the whole list
+Can use < or > to compare numbers
+SELECT AVG([column]) FROM [table] - prints the average of a column
+IS - equals
+WHERE - use where it makes sense
+LIKE "%str%"
+SELECT count([column]) ... - prints the number of valid items
+SELECT DISTINCT [column]... - prints unique values

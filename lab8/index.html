@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+
+            // TODO: Add code to check answers to questions
+            function earth()
+            {
+                document.getElementById("earth").style.backgroundColor = "red";
+                document.getElementById("correct").innerHTML = 'Incorrect!';
+            }
+            
+            function mars()
+            {
+                document.getElementById("mars").style.backgroundColor = "red";
+                document.getElementById("correct").innerHTML = 'Incorrect!';
+            }
+            
+            function jupiter()
+            {
+                document.getElementById("jupiter").style.backgroundColor = "green";
+                document.getElementById("correct").innerHTML = 'Correct!';
+            }
+            
+            function check()
+            {
+                let answer = document.querySelector('#answer').value;
+                if (answer == "14159265358")
+                {
+                    document.getElementById("correct2").innerHTML = 'Correct!';
+                }
+                else
+                {
+                    document.getElementById("correct2").innerHTML = 'Incorrect!';
+                }
+            }
+
+        </script>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What is the largest planet in the solar system?</h3>
+                <p id="correct"></p>
+
+            </div>
+            
+            <div class="buttons">
+                <button type="button" onclick="earth()" id="earth">Earth</button>
+                <button type="button" onclick="mars()" id="mars">Mars</button>
+                <button type="button" onclick="jupiter()" id="jupiter">Jupiter</button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+
+                <!-- TODO: Add free response question here -->
+                <h3>What are the first 10 digits of pi?</h3>
+                <p id="correct2"></p>
+
+            </div>
+            <form onsubmit="check(); return false;">
+                <input id="answer" type="text" placeholder="3.">
+                <input type="submit">
+            </form>
+
+        </div>
+    </body>
+</html>
